@@ -16,6 +16,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Agreement"></activity>
+
+        <activity android:name=".Home_Bottombar"></activity>
+        <activity android:name=".Home_Comprehensive"></activity>
+        <activity android:name=".Home_Release"></activity>
+        <activity android:name=".Home_Find"></activity>
+        <activity android:name=".Home_My"></activity>
+
+<!--        <activity android:name=".Comprehensive_blogs"></activity>-->
+<!--        <activity android:name=".Comprehensive_concern"></activity>-->
+<!--        <activity android:name=".Comprehensive_english"></activity>-->
+<!--        <activity android:name=".Comprehensive_information"></activity>-->
+<!--        <activity android:name=".Comprehensive_question"></activity>-->
+<!--        <activity android:name=".Comprehensive_recommend"></activity>-->
+<!--        <activity android:name=".Comprehensive_software"></activity>-->
+
     </application>
 
 </manifest>

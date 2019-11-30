@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/fragment_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabs_rg" />
+
+    <RadioGroup
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dcdcdc"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/tab_home"
+            style="@style/Custom.TabRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_contact_one"
+            android:text="综合" />
+
+        <RadioButton
+            android:id="@+id/tab_release"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/tab_contact_two"
+            android:text="动弹" />
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/tab_more"-->
+<!--            style="@style/Custom.TabRadioButton.more"-->
+<!--            android:drawableTop="@drawable/tab_contact_more"-->
+<!--            />-->
+        <RadioButton
+            android:id="@+id/tab_find"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/tab_contact_three"
+            android:text="发现" />
+        <RadioButton
+            android:id="@+id/tab_my"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/tab_contact_four"
+            android:text="我的" />
+    </RadioGroup>
+
+</RelativeLayout>
