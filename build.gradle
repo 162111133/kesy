@@ -8,7 +8,8 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.1'
-        
+        classpath 'me.tatarka:gradle-retrolambda:3.2.4'
+        classpath 'com.mob.sdk:MobSDK:+'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -16,12 +17,41 @@ buildscript {
 
 allprojects {
     repositories {
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
         
     }
 }
-
+ext {
+    versionCode = 30302
+    versionName = '3.3.2'
+    buildTool = findBuildTools()
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+String findBuildTools() {
+    def sdkDir = System.env.ANDROID_HOME;
+    if(sdkDir == null) {
+        def localProperties = new File(project.rootDir, "local.properties")
+        if (localProperties.exists()) {
+            Properties properties = new Properties()
+            localProperties.withInputStream {
+                instr->properties.load(instr)
+            }
+            sdkDir = properties.getProperty('sdk.dir')
+        }
+    }
+    if (sdkDir != null) {
+        def buildTools = new File(sdkDir, "build-tools")
+        if (buildTools.exists()) {
+            def tools = buildTools.list()
+            if (tools != null) {
+                Arrays.sort(tools)
+                return tools[tools.length - 1]
+            }
+        }
+    }
+    return null
 }

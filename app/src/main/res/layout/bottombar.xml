@@ -1,51 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/fragment_vp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <FrameLayout
+        android:id="@+id/FramePage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tabs_rg" />
-
-    <RadioGroup
-        android:id="@+id/tabs_rg"
+        >
+    </FrameLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:background="#dcdcdc"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/tab_home"
-            style="@style/Custom.TabRadioButton"
-            android:checked="true"
-            android:drawableTop="@drawable/tab_contact_one"
-            android:text="综合" />
-
-        <RadioButton
-            android:id="@+id/tab_release"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/tab_contact_two"
-            android:text="动弹" />
-
-<!--        <RadioButton-->
-<!--            android:id="@+id/tab_more"-->
-<!--            style="@style/Custom.TabRadioButton.more"-->
-<!--            android:drawableTop="@drawable/tab_contact_more"-->
-<!--            />-->
-        <RadioButton
-            android:id="@+id/tab_find"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/tab_contact_three"
-            android:text="发现" />
-        <RadioButton
-            android:id="@+id/tab_my"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/tab_contact_four"
-            android:text="我的" />
-    </RadioGroup>
-
-</RelativeLayout>
+        android:layout_height="wrap_content"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemTextColor="#00CD00"
+        android:layout_gravity="bottom"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/item_bottom_1">
+
+    <fragment
+        android:id="@+id/item_bottom_1"
+        android:name="com.example.kesy.ui.fragment.Home_Comprehensive"
+        android:label="综合"
+        tools:layout="@layout/home_comprehensive" />
+
+    <fragment
+        android:id="@+id/item_bottom_2"
+        android:name="com.example.kesy.ui.fragment.Home_Release"
+        android:label="乱弹"
+        tools:layout="@layout/home_release" />
+
+    <fragment
+        android:id="@+id/item_bottom_4"
+        android:name="com.example.kesy.ui.fragment.Home_Find"
+        android:label="发现"
+        tools:layout="@layout/home_find" />
+    <fragment
+        android:id="@+id/item_bottom_5"
+        android:name="com.example.kesy.ui.fragment.Home_My"
+        android:label="我的"
+        tools:layout="@layout/home_my" />
+
+</navigation>
